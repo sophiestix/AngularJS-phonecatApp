@@ -4,10 +4,14 @@
 angular.
     module('phoneDetail').
     component('phoneDetail', {
-        template: 'TBD: detail view for <span>{{ $ctrl.phoneID }}</span>',
-        controller: ['$routeParams',
-            function PhoneDetailController($routeParams) {
-                this.phoneID = $routeParams.phoneID;
+        templateUrl: 'phone-detail/phone-detail.template.html',
+        controller: ['$http', '$routeParams',
+            function PhoneDetailController($http, $routeParams) {
+                var self = this;
+
+                $http.get('../phones/' + $routeParams.phoneID + '.json').then(function (response) {
+                    self.phone = response.data
+                });
             }
         ]
     });
