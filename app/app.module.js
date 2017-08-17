@@ -3,8 +3,11 @@
 // Define the `phonecatApp` module
 angular.module('phonecatApp', [
     'ngRoute',
-    // ...which depends on the `phoneList` module
+    // ...which depens on the `core` module
+    'core',
+    // ...and the `phoneList` module
     'phoneList',
     // ...and the `phoneDetail` module
-    'phoneDetail'
+    'phoneDetail',
+    
 ]);
