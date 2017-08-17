@@ -11,7 +11,7 @@ angular.
                 //According to the specified template, AngularJS will create an instance of the phoneList component to manage the view. 
                 //Note that this is the same markup that we used to have in the index.html file.
             }).
-            when('/phones/:phoneID', {
+            when('/phones/:phoneId', {
                 template: '<phone-detail></phone-detail>' //Determines the view that will be shown, when the URL hash fragment matches /phones/<phoneId>, 
                 // where <phoneId> is a variable part of the URL. 
                 // In charge of the view will be the phoneDetail component.
