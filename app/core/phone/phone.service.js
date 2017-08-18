@@ -8,7 +8,8 @@ angular.
                 query: {
                     method: 'GET',
                     params: {phoneId: 'phones'},
-                    isArray: false
+                    isArray: true // there is a problem, the `phones.json` is an array, so this is true,
+                    // but for the detail view, the separate `json` files are objects, so this should be false
                 }
             });
         }
